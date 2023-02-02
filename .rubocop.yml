@@ -1,0 +1,19 @@
+AllCops:
+  NewCops: enable
+Style/Documentation:
+  Enabled: false
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/WordArray:
+  EnforcedStyle: brackets
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+Layout/CaseIndentation:
+  EnforcedStyle: end
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "livespace/version"
 require "dry-configurable"
 

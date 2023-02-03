@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 require "dry-configurable"
+require "http"
 
 require "livespace/connection"
+require "livespace/company"
 require "livespace/errors"
 require "livespace/version"
 

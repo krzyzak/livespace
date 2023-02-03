@@ -2,6 +2,7 @@
 
 require "bundler/setup"
 require "livespace"
+require "webmock/rspec"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

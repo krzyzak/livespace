@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
-require "livespace/version"
 require "dry-configurable"
+
+require "livespace/connection"
+require "livespace/errors"
+require "livespace/version"
 
 module Livespace
   extend Dry::Configurable

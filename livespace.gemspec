@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Michał Krzyżanowski"]
   spec.email         = ["krzyzak@users.noreply.github.com"]
 
-  spec.summary       = "Ruby bindings to LiveSpace API"
+  spec.summary       = "Ruby bindings to Livespace API"
   spec.homepage      = "https://github.com/krzyzak/livespace"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.7.0")
 
@@ -25,6 +25,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "rubocop", "~> 1.44"
+  spec.add_development_dependency "webmock", "~> 3.18"
 
   spec.add_runtime_dependency "dry-configurable", "~> 1.0"
+  spec.add_runtime_dependency "http", "~> 5.1"
 end

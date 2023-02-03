@@ -9,7 +9,7 @@ require "livespace/version"
 module Livespace
   extend Dry::Configurable
 
-  setting :domain
-  setting :api_key
-  setting :api_secret
+  setting :domain, default: ENV["LIVESPACE_DOMAIN"]
+  setting :api_key, default: ENV["LIVESPACE_API_KEY"]
+  setting :api_secret, default: ENV["LIVESPACE_API_SECRET"]
 end

@@ -44,15 +44,23 @@ module Livespace
     end
 
     def api_key
-      Livespace.config.api_key
+      Livespace.config.api_key || raise(ArgumentError, "Missing API key")
+    end
+
+    def api_secret
+      Livespace.config.api_secret || raise(ArgumentError, "Missing API secret")
+    end
+
+    def domain
+      Livespace.config.domain || raise(ArgumentError, "Missing domain")
     end
 
     def api_sha
-      Digest::SHA1.hexdigest([api_key, api_token, Livespace.config.api_secret].join)
+      Digest::SHA1.hexdigest([api_key, api_token, api_secret].join)
     end
 
     def base_url
-      @base_url ||= [Livespace.config.domain, "api/public/json"].join("/")
+      @base_url ||= [domain, "api/public/json"].join("/")
     end
 
     def raw_auth_hash
